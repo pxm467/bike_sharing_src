@@ -27,4 +27,14 @@ public class SysUserServiceImpl  implements SysUserService {
         result.setData(sysUser);
         return result;
     }
+
+    @Override
+    public Result addUser(SysUser sysUser) {
+        Result result = Result.newInstance().success();
+        int k = sysUserMapper.addUser(sysUser);
+        if(k != 1){
+            return result.failure();
+        }
+        return result;
+    }
 }

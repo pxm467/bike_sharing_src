@@ -14,4 +14,8 @@
         select * from sys_user where user_name = #{userName,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
     </select>
 
+    <insert id="addUser"   parameterType="com.slx.bs.po.SysUser">
+        insert into sys_user(phone ,name ,user_name ,password,level,create_time) values(#{phone,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{level,jdbcType=SMALLINT},now())
+    </insert>
+
 </mapper>

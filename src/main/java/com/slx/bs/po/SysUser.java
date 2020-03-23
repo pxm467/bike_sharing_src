@@ -6,9 +6,19 @@ public class SysUser {
     private int id;
     private String name;
     private String userName;
+    private String phone;
     private String password;
     private int level;
+
     private Date creatTime;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public int getId() {
         return id;
